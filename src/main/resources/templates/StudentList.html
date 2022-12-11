@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Title</title>
+</head>
+
+<body>
+<div class="container mt-4">
+  <section>
+    <table class="table table-striped">
+      <tr>
+        <th>Subject</th>
+        <th>Student Name</th>
+        <th>CGPA</th>
+        <th>Student ID</th>
+      </tr>
+
+      <th:block th:each="st: ${list}">
+        <tr>
+          <td th:text="${st.subject}"></td>
+          <td th:text="${st.studentname}"></td>
+          <td th:text="${st.cgpa}"></td>
+          <td th:text="${st.studentid}"></td>
+
+        </tr>
+
+      </th:block>
+
+    </table>
+  </section>
+</div>
+</body>
+</html>
